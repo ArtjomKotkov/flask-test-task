@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+}
+
+.error-block {
+    color: crimson;
+}
+
+#middle-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-block {
+    min-width: 200px;
+    min-height: 200px;
+    margin: 15px;
+    -webkit-box-shadow: 0px 9px 14px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 14px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 14px -2px rgba(0,0,0,0.75);
+    border-radius: 50%;
+}
+
+.user-block:hover {
+    text-decoration: none;
+}
+
+.fade-block {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+}
+
+.fade-block span {
+    color: rgba(0,0,0,0);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.fade-block:hover {
+    background-color: white;
+    transition-duration: 0.5s;
+    background-image: none;
+}
+
+.fade-block:hover span {
+    color: black;
+    transition-duration: 0.5s;
+}
+
+#logout {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 15px;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 7.5px;
+    color: #4A76A8;
+}
+
+#logout a {
+    color: #4A76A8;
+    text-decoration: none;
+    border-radius: 7.5px;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+#logout a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #4A76A8;
+    color: white;
+    transition-duration: 0.5s;
+}

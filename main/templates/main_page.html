@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Рандомные друзья ВК</title>
+        <link rel="stylesheet" href="{{ url_for('main.views.static', filename='main_style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-row align-items-center">
+        {% if errors %}
+            {% for error in errors %}
+                <div class="error-block">{{ error }}</div>
+            {% endfor %}
+        {% else %}
+        <div class="d-flex flex-row justify-content-center align-items-center flex-wrap" id="middle-block">
+            {% for friend in items %}
+                <a href="https://vk.com/{{ friend.domain }}" target="_blank" class="d-block user-block" style="background-image: url({{ friend.photo_200 }});">
+                    <div class="fade-block d-flex flex-row align-items-center justify-content-center">
+                        <span class="d-block">{{ friend.first_name }} {{ friend.last_name }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div class="d-flex flex-row justify-content-end align-items-center" id="logout">
+            <span>{{ user.first_name }} {{ user.last_name }}</span>
+            <a href="{{ url_for('auth.views.logout_view') }}">Выход</a>
+        </div>
+        {% endif %}
+    </body>
+</html>

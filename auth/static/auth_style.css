@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+}
+
+#auth-button {
+    height: 3em;
+    padding: 0 60px;
+    background-color: white;
+    border: 2px solid #4A76A8;
+    border-radius: 0.5em;
+    font-family: 'Oswald', sans-serif;
+    color: #4A76A8;
+}
+
+#auth-button:hover {
+    color: white;
+    background-color: #4A76A8;
+}
+
+#auth-button:focus {
+    border: 2px solid #4A76A8;
+    outline: none;
+}
